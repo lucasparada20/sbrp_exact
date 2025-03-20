@@ -49,4 +49,10 @@ The second example in run.sh calls the executable with the instance ssbrp_30_20_
 build/exec_exact instance_file=instances_pcg/ssbrp_30_20_0.txt epsilon=0.2 delta=0.2 opt_cuts=3  instance_type=pcg algorithm=dl
 ```
 ## Ouput
-Upon calling the examples in run.sh, you should see the following output
+Upon calling the examples in run.sh, you should see the following output.
+
+### Chicago_20_1.txt
+
+![Chicago_20_1.txt](/images/Chicago_20_1.png)
+
+### ssbrp_30_20_0.txt
