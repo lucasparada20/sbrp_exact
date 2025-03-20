@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Hard code the path to the CPLEX directory
-set(CPLEX_DIR "/home/lucasparada20/CPLEX_Studio2211")
+set(CPLEX_DIR "/some/path/to/Cplex")
 message("Using CPLEX_DIR = ${CPLEX_DIR}")
 
 # Include directories for CPLEX
