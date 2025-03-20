@@ -7,7 +7,7 @@ An implementation of the Dissagregated Integer L-shaped method for the stochasti
 
 First, clone the repository.
 
-```
+```Unix
 git clone https://github.com/lucasparada20/sbrp.git
 cd sbrp
 chmod u+x cmake_script.sh
