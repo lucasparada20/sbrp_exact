@@ -31,7 +31,7 @@ int main(int arg, char ** argv)
 	{
 		printf("usage: executable, instance_file, epsilon, delta, cuts_type, instance_type, algorithm optional:initial_solution_file \n");
 		printf("Instance_type: dins or pcg\n");
-		printf("Cuts: P&L=3 Benders=6 Hybrid=7\n");
+		printf("Cuts: P&L=1 Benders=2 Hybrid=3\n");
 		printf("Algorithm: DL-shaped=dl Multicut=m(Only accepts Benders Opt Cuts=6)\n");
 		printf("exiting.\n");
 		exit(1);
@@ -47,10 +47,10 @@ int main(int arg, char ** argv)
 		exit(1);			
 	}		
 		
-	if(std::strcmp(Parameters::GetAlgorithm(),"m")==0 && Parameters::GetTypeOfOptimalityCuts() != 6)
+	if(std::strcmp(Parameters::GetAlgorithm(),"m")==0 && Parameters::GetTypeOfOptimalityCuts() != 2)
 	{
 		printf("Multicut requires Benders optimality cuts. Exiting ...\n");
-		printf("Reminder for optimality cuts: P&L=3 Benders=6 Hybrid=7\n");
+		printf("Reminder for optimality cuts: P&L=1 Benders=2 Hybrid=3\n");
 		exit(1);
 	}
 

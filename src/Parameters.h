@@ -4,9 +4,9 @@
 #include <time.h>
 #include <math.h>
 
-#define OPT_CUT_TYPE_PL 3
-#define OPT_CUT_TYPE_BENDERS 6
-#define OPT_CUT_TYPE_HYBRID 7
+#define OPT_CUT_TYPE_PL 1
+#define OPT_CUT_TYPE_BENDERS 2
+#define OPT_CUT_TYPE_HYBRID 3
 
 class Parameters
 {
