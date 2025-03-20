@@ -56,3 +56,5 @@ Upon calling the examples in run.sh, you should see the following output.
 ![Chicago_20_1.txt](/images/Chicago_20_1.png)
 
 ### ssbrp_30_20_0.txt
+
+![ssbrp_30_20.txt](/images/ssbrp_30_20.png)
