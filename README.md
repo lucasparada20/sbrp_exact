@@ -3,7 +3,7 @@ An implementation of the Disaggregated Integer L-shaped (DL-shaped) method for t
 
 * [Technical Report](https://www.cirrelt.ca/documentstravail/cirrelt-2024-26.pdf)
 
-## Building the code
+## Building the code in Linux
 
 1. Clone the repository and add executable permission to a script that will call CMake for you:
 
