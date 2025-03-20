@@ -1,5 +1,5 @@
 # The DL Shaped method for the SBRP
-An implementation of the Dissagregated Integer L-shaped (DL-shaped) method for the stochastic bicycle repositioning problem
+An implementation of the Disaggregated Integer L-shaped (DL-shaped) method for the stochastic bicycle repositioning problem and using the Cplex library.
 
 * [Technical Report](https://www.cirrelt.ca/documentstravail/cirrelt-2024-26.pdf)
 
