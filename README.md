@@ -14,6 +14,6 @@ chmod u+x cmake_script.sh
 ```
 Second, the compiler needs an absolute path to your installed Cplex library. To provide the absolute path, go into sbrp/CMakeLists.txt and edit the following line:
 
-[nano src/CMakeLists.txt](/image.png)
+![nano src/CMakeLists.txt](/image.png)
 
 ## Running the code
