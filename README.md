@@ -5,9 +5,12 @@ An implementation of the Dissagregated Integer L-shaped method for the stochasti
 
 ## Building the code
 
+First, clone the repository.
+
 ```
 git clone https://github.com/lucasparada20/sbrp.git
 cd sbrp
 ```
+Second, the compiler needs an absolute path to your installed Cplex library. To provide the absolute path, go into sbrp/CMakeLists.txt and edit the following line:
 
 ## Running the code
