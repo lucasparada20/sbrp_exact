@@ -1,4 +1,4 @@
-# The-DL-Shaped-method-for-the-SBRP
+# The DL Shaped method for the SBRP
 An implementation of the Dissagregated Integer L-shaped (DL-shaped) method for the stochastic bicycle repositioning problem
 
 * [Technical Report](https://www.cirrelt.ca/documentstravail/cirrelt-2024-26.pdf)
@@ -48,4 +48,5 @@ The second example in run.sh calls the executable with the instance ssbrp_30_20_
 ```bash
 build/exec_exact instance_file=instances_pcg/ssbrp_30_20_0.txt epsilon=0.2 delta=0.2 opt_cuts=3  instance_type=pcg algorithm=dl
 ```
-
+## Ouput
+Upon calling the examples in run.sh, you should see the following output
