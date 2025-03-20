@@ -5,7 +5,7 @@ An implementation of the Dissagregated Integer L-shaped (DL-shaped) method for t
 
 ## Building the code
 
-1. Clone the repository and add executable permission to a script that will call CMake:
+1. Clone the repository and add executable permission to a script that will call CMake for you:
 
 ```shell
 git clone https://github.com/lucasparada20/sbrp.git
