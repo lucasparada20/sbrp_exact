@@ -57,4 +57,4 @@ Upon calling the examples in run.sh, you should see the following output.
 
 ### ssbrp_30_20_0.txt
 
-![ssbrp_30_20.txt](/images/ssbrp_30_20.jpg)
+![ssbrp_30_20.txt](/images/ssbrp_30_20_0.jpg)
