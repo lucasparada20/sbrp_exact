@@ -28,7 +28,7 @@ void ExactSbrpO::SolveProblem(IloEnv env)
 		int cplex_status = (int)cplex.getCplexStatus();
 		double sol = re?cplex.getObjValue():0;
 		
-		printf("re:%d sol:%.2lf status:%d nbnodes:%d time:%.3lf\n", (int)re, sol, cplex_status, (int)cplex.getNnodes(), time_taken);
+		printf("re:%d sol:%.3lf status:%d nbnodes:%d time:%.3lf\n", (int)re, sol, cplex_status, (int)cplex.getNnodes(), time_taken);
 
 		if (re && cplex_status != 11)
 		{
@@ -86,7 +86,9 @@ void ExactSbrpO::SolveProblem(IloEnv env)
 		nb_frac_l_cuts = _sep->nb_frac_l_cuts;
 		nb_sorted_l_cuts = _sep->nb_sorted_l_cuts;
 		nb_benders_cuts = _sep->nb_benders_cuts;
-
+		
+		int cuts_type = Parameters::GetTypeOfOptimalityCuts();
+		printf("Type of cuts: %s\n",cuts_type == 1 ? "P&L" : cuts_type == 2 ? "Benders" : "Hybrid");
 		printf("nb_inf_sets:%d\n", _sep->nb_inf_sets);
 		printf("nb_inf_paths:%d\n",_sep->nb_inf_paths);
 		printf("nb_sub_tours:%d\n", _sep->nb_sub_tours);
@@ -293,7 +295,8 @@ void ExactSbrpO::Init(IloEnv env)
 					nb++;
 				}
 			cost = (cost / prob->GetScenarioCount()) * Parameters::GetCminEpsilon();
-			if(nb >= 1)
+			//"Only add this cut if the total violation across all scenarios is at least 2 units per scenario on average."
+			if(nb >= 1 && cost >= 2*Parameters::GetCminEpsilon())
 			{
 				IloExpr expr(env);
 				expr -= cost * x[ar->index];
@@ -302,7 +305,9 @@ void ExactSbrpO::Init(IloEnv env)
 				ExSbrpArcO* arc = graph->GetArc(ar->to->no , ar->from->no);
 				if (arc != NULL)
 					expr -= cost * x[arc->index];
+				//std::cout << expr << " <= 0" << std::endl;
 				model.add(expr >= 0);
+				
 			}
 		}
 	}
