@@ -20,7 +20,7 @@ set(CPLEX_DIR "/some/path/to/Cplex")
 
 for example, in my Ubuntu environment, the absolute path is as follows:
 
-![nano src/CMakeLists.txt](/images/image.png)
+![nano src/CMakeLists.txt](lucasparada20/sbrp_exact/images/image.png)
 
 3. Build the code by typing:
 
